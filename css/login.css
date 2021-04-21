@@ -19,3 +19,29 @@ body{
     padding-right: 40px;
     box-shadow: 5px 10px 7px rgba(0,0,0,0.5);
 }
+
+
+
+.nav-link{
+    margin-left: 20px;
+    background: linear-gradient(to right, #CCC 50%, #FF5858 50%, #CC2E5D);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    background-position: -100%;
+}
+
+.margin20{
+    margin-top: 20px;
+}
+
+.notif-detalles{
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 5px 10px 7px rgba(0,0,0,0.5);
+}
