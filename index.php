@@ -23,18 +23,19 @@
         <div class="col-md-3 columna-form">
             <img class="img-fluid" src="svg/person-circle-outline.svg" alt="">
                 
-            <form action="menu.html"    name="formlogin">
+            <form action="validar.php" name="formlogin"   method="POST">
                 <div class="mb-3">
                     <label for="exampleInputUser1" class="form-label">Nombre de Usuario</label>
-                    <input maxlength="30" type="text" class="form-control" id="user" aria-describedby="emailHelp" required>
+                    <input maxlength="30" type="text" class="form-control" name="user" id="user" aria-describedby="emailHelp" required>
                 </div>
+                
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                    <input maxlength="30" type="password" class="form-control" id="pass" required>
+                    <input maxlength="30" type="password" class="form-control" name="pass" id="pass" required>
                 </div>
                     
                 <button type="submit" class="btn btn-primary">Acceder</button>
-                </form>
+            </form>
         </div>
     </div>
     
