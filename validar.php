@@ -5,7 +5,7 @@
 
         
 
-        if($nombre == "jim-ux" && $password === "123"){
+        if($nombre == "123" && $password === "123"){
             header('Location: ./menu.php');
 
         }
