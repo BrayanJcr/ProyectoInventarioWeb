@@ -53,7 +53,11 @@ class ControladorUsuarios{
 
 						if($ultimoLogin == "ok"){
 
-							echo 'Entrada exitosa';
+							echo '<script>
+
+								window.location = "menu.php";
+
+							</script>';
 
 						}				
 						

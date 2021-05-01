@@ -8,14 +8,14 @@
     <script src="js/scrollreveal.js"></script>
     <!--Bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
-          <img src="images/mi-tienda-segura-1.png" alt="logo tienda" style="width: 5%">
+          <img src="../imagenes/mi-tienda-segura-1.png" alt="logo tienda" style="width: 5%">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -59,12 +59,12 @@
             <div class="col-md-9">
                 <div class="container">
                     <div class="row">
-                        <img class="rounded img-fluid"  src="images/tienda fisica.jpg" alt="">
+                        <img class="rounded img-fluid"  src="../imagenes/tienda fisica.jpg" alt="">
                     </div>
                     <div class="row justify-content-center margin20">
-                        <div class="col-md-3"><img style="width: 50%" src="images/example.png" alt=""></div>
-                    <div class="col-md-3"><img style="width: 50%" src="images/example.png" alt=""></div>
-                    <div class="col-md-3"><img style="width: 50%" src="images/example.png" alt=""></div>
+                        <div class="col-md-3"><img style="width: 50%" src="../imagenes/example.png" alt=""></div>
+                    <div class="col-md-3"><img style="width: 50%" src="../imagenes/example.png" alt=""></div>
+                    <div class="col-md-3"><img style="width: 50%" src="../imagenes/example.png" alt=""></div>
                     </div>
                 </div>
             </div>
