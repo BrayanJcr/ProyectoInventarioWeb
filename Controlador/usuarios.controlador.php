@@ -53,11 +53,7 @@ class ControladorUsuarios{
 
 						if($ultimoLogin == "ok"){
 
-							echo '<script>
-
-								window.location = "inicio";
-
-							</script>';
+							echo 'Entrada exitosa';
 
 						}				
 						

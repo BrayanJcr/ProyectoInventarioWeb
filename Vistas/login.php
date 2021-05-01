@@ -1,52 +1,54 @@
-<div id="bak"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-<div class="login-box">
-  
-  <div class="login-logo">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/login.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="container"></div>
 
-    <img src="imagenes/mi-tienda-segura-1.png" class="img-responsive">
+  <div class="row">
+    
+    <div class="col-md-9">
+
+      <img src="../imagenes/mi-tienda-segura-1.png" class="img-responsive">
+
+    </div>
+
+    <div class="col-md-3">
+
+
+      <form class="columna-form" method="post">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Usuario</label>
+            <input type="text" class="form-control" placeholder="Usuario" name="ingUsuario" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" placeholder="Contraseña" name="ingPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <?php
+          include "../Controlador/usuarios.controlador.php";
+          include "../Modelos/usuarios.modelo.php";
+          $login = new ControladorUsuarios();
+          $login -> ctrIngresoUsuario();
+        ?>
+    </div>
+
+    
 
   </div>
+</body>
+</html>
 
-  <div class="login-box-body">
 
-    <p class="login-box-msg">Ingresar al sistema</p>
-
-    <form method="post">
-
-      <div class="form-group has-feedback">
-
-        <input type="text" class="form-control" placeholder="Usuario" name="ingUsuario" required>
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-
-      </div>
-
-      <div class="form-group has-feedback">
-
-        <input type="password" class="form-control" placeholder="Contraseña" name="ingPassword" required>
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      
-      </div>
-
-      <div class="row">
-       
-        <div class="col-xs-4">
-
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
-        
-        </div>
-
-      </div>
-
-      <?php
-
-        $login = new ControladorUsuarios();
-        $login -> ctrIngresoUsuario();
-        
-      ?>
-
-    </form>
-
-  </div>
-
-</div>
