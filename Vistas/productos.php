@@ -51,6 +51,7 @@
 
       <div class="container bg-light rounded ">
 
+<<<<<<< HEAD
               <div class="content-wrapper">
 
               <section class="content-header">
@@ -70,6 +71,9 @@
                 </ol>
 
               </section>
+=======
+<section class="content">
+>>>>>>> fc9d8cba9ae517ada07dff7acd8f390edad5c328
 
               <section class="content">
 

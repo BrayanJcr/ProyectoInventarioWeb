@@ -24,9 +24,6 @@
 
     <div class="col-md-3 columna-form">
 
-      
-
-        
         <form class="" method="post">
             <img src="../svg/person-circle-outline.svg" alt="">
             <div class="mb-3">
