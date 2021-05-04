@@ -51,7 +51,6 @@
 
       <div class="container bg-light rounded ">
 
-<<<<<<< HEAD
               <div class="content-wrapper">
 
               <section class="content-header">
@@ -73,7 +72,6 @@
               </section>
 =======
 <section class="content">
-<<<<<<< HEAD
     <h1>
       
       Administrar productos
@@ -81,11 +79,8 @@
     </h1>
 
     <div class="box">
-=======
->>>>>>> fc9d8cba9ae517ada07dff7acd8f390edad5c328
 
               <section class="content">
->>>>>>> 771aa67ed0cc50a917c22cd3694b07b6704ca61d
 
                 <div class="box">
 
@@ -170,16 +165,13 @@
 
                         <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
 
-<<<<<<< HEAD
-                include "../Controlador/categorias.controlador.php";
-                $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
-=======
+                        include "../Controlador/categorias.controlador.php";
+                        $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
                         <div class="form-group">
                           
                           <div class="input-group">
                           
                             <span class="input-group-addon"><i class="fa fa-th"></i></span> 
->>>>>>> 771aa67ed0cc50a917c22cd3694b07b6704ca61d
 
                             <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
                               
@@ -337,13 +329,11 @@
 
                       <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-<<<<<<< HEAD
-        include "../Controlador/productos.controlador.php";
-        $crearProducto = new ControladorProductos();
-        $crearProducto -> ctrCrearProducto();
-=======
+                      include "../Controlador/productos.controlador.php";
+                      $crearProducto = new ControladorProductos();
+                      $crearProducto -> ctrCrearProducto();
+
                       <button type="submit" class="btn btn-primary">Guardar producto</button>
->>>>>>> 771aa67ed0cc50a917c22cd3694b07b6704ca61d
 
                     </div>
 
@@ -551,13 +541,10 @@
 
                     </div>
 
-<<<<<<< HEAD
-        include "../Controlador/productos.controlador.php";
-        $editarProducto = new ControladorProductos();
-        $editarProducto -> ctrEditarProducto();
-=======
+                    include "../Controlador/productos.controlador.php";
+                    $editarProducto = new ControladorProductos();
+                    $editarProducto -> ctrEditarProducto();
                   </form>
->>>>>>> 771aa67ed0cc50a917c22cd3694b07b6704ca61d
 
                     <?php
 
@@ -570,16 +557,14 @@
 
               </div>
 
-<<<<<<< HEAD
-<?php
-include "../Controlador/productos.controlador.php";
-$eliminarProducto = new ControladorProductos();
-$eliminarProducto -> ctrEliminarProducto();
-=======
+              <?php
+              include "../Controlador/productos.controlador.php";
+              $eliminarProducto = new ControladorProductos();
+              $eliminarProducto -> ctrEliminarProducto();
+
               </div>
 
               <?php
->>>>>>> 771aa67ed0cc50a917c22cd3694b07b6704ca61d
 
               $eliminarProducto = new ControladorProductos();
               $eliminarProducto -> ctrEliminarProducto();
