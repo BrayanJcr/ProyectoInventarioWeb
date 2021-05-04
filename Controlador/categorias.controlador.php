@@ -1,5 +1,5 @@
 <?php
-require_once "../Controlador/conexion.php";
+include "../Modelos/categorias.modelo.php";
 
 class ControladorCategorias{
 
@@ -74,8 +74,7 @@ class ControladorCategorias{
 	static public function ctrMostrarCategorias($item, $valor){
 
 		$tabla = "categorias";
-
-		include "../Modelos/categorias.modelo.php";
+		
 		$respuesta = ModeloCategorias::mdlMostrarCategorias($tabla, $item, $valor);
 
 		return $respuesta;
