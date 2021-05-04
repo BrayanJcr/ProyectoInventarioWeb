@@ -18,8 +18,6 @@ body{
     box-shadow: 5px 10px 7px rgba(0,0,0,0.5);
 }
 
-
-
 .nav-link{
     margin-left: 20px;
     background: linear-gradient(to right, #CCC 50%, #FF5858 50%, #CC2E5D);

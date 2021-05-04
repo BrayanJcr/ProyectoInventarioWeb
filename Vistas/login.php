@@ -52,13 +52,12 @@
       
     </div>
 
-    
-
   </div>
 
   <!--script scroll reveal-->
   <script src="../js/scroll/loginscroll.js"></script>
 </body>
 </html>
+
 
 
