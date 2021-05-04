@@ -34,6 +34,7 @@
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
               <input type="password" class="form-control" placeholder="Contraseña" name="ingPassword" required>
             </div>
+            
             <button type="submit" class="btn btn-primary">Acceder</button>
             
             <button type="submit" class="btn btn btn-success margin-left-auto">Registrarse</button>
