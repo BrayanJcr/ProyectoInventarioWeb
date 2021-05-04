@@ -39,7 +39,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Acceder</button>
             
-            <button type="submit" class="btn btn btn-success">Registrarse</button>
+            <button type="submit" class="btn btn btn-success margin-left-auto">Registrarse</button>
             
           </form>
 
