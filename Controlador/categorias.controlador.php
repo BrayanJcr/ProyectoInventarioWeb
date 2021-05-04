@@ -16,6 +16,7 @@ class ControladorCategorias{
 
 				$datos = $_POST["nuevaCategoria"];
 
+				include "../Modelo/categorias.modelo.php";
 				$respuesta = ModeloCategorias::mdlIngresarCategoria($tabla, $datos);
 
 				if($respuesta == "ok"){
@@ -73,6 +74,7 @@ class ControladorCategorias{
 
 		$tabla = "categorias";
 
+		include "../Modelo/categorias.modelo.php";
 		$respuesta = ModeloCategorias::mdlMostrarCategorias($tabla, $item, $valor);
 
 		return $respuesta;

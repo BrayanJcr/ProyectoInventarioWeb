@@ -106,6 +106,7 @@ class ControladorProductos{
 							   "precio_venta" => $_POST["nuevoPrecioVenta"],
 							   "imagen" => $ruta);
 
+			    include "../Modelo/productos.modelo.php";
 				$respuesta = ModeloProductos::mdlIngresarProducto($tabla, $datos);
 
 				if($respuesta == "ok"){
@@ -255,6 +256,7 @@ class ControladorProductos{
 							   "precio_venta" => $_POST["editarPrecioVenta"],
 							   "imagen" => $ruta);
 
+				include "../Modelo/productos.modelo.php";
 				$respuesta = ModeloProductos::mdlEditarProducto($tabla, $datos);
 
 				if($respuesta == "ok"){
@@ -319,6 +321,7 @@ class ControladorProductos{
 
 			}
 
+			include "../Modelo/producto.modelo.php";
 			$respuesta = ModeloProductos::mdlEliminarProducto($tabla, $datos);
 
 			if($respuesta == "ok"){
