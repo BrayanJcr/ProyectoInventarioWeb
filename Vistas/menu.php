@@ -10,6 +10,7 @@
     <!--Bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/menu.css">
 </head>
 
 <body>
@@ -58,13 +59,18 @@
             <div class="col-md-9">
                 <div class="container">
                     <div class="row">
-                        <img class="rounded img-fluid"  src="../imagenes/tienda fisica.jpg" alt="">
+                        <img class="rounded img-fluid min-h"  src="../imagenes/tienda fisica.jpg" alt="">
                     </div>
-                    <div class="row justify-content-center margin20">
-                        <div class="col-md-3"><img style="width: 50%" src="../imagenes/example.png" alt=""></div>
-                    <div class="col-md-3"><img style="width: 50%" src="../imagenes/example.png" alt=""></div>
-                    <div class="col-md-3"><img style="width: 50%" src="../imagenes/example.png" alt=""></div>
-                    </div>
+                    <div class="row row-cols-3 justify-content-between margin20 px-0">
+                        <div class="col contenedor">
+                          <a href="productos.php"><img class="imagen image-fluid" style="width: 105%" src="../imagenes/frutas-producto.jpg" alt=""></a>
+                        </div>
+                        <div class="col contenedor ">
+                          <a href="ventas.php"><img class="imagen image-fluid" style="width: 105%" src="../imagenes/Moneda-venta.jpg" alt=""></a>
+                        </div>
+                        <div class="col contenedor ">
+                          <a href="producto.php"><img class="imagen image-fluid" style="width: 105%" src="../imagenes/tienda-ven.jpg" alt=""></a>
+                        </div>
                 </div>
             </div>
         </div>

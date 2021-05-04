@@ -9,6 +9,7 @@
     <script src="../js/scrollreveal.js"></script>
     <!--Bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!--CSS links-->
     <link rel="stylesheet" href="../css/login.css">
 </head>
 
@@ -185,126 +186,6 @@
                             </select>
 
                           </div>
-
-                        </div>
-
-                        <!-- ENTRADA PARA EL CÓDIGO -->
-                        
-                        <div class="form-group">
-                          
-                          <div class="input-group">
-                          
-                            <span class="input-group-addon"><i class="fa fa-code"></i></span> 
-
-                            <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" required>
-
-                          </div>
-
-                        </div>
-
-                        <!-- ENTRADA PARA LA DESCRIPCIÓN -->
-
-                        <div class="form-group">
-                          
-                          <div class="input-group">
-                          
-                            <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
-
-                            <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" required>
-
-                          </div>
-
-                        </div>
-
-                        <!-- ENTRADA PARA STOCK -->
-
-                        <div class="form-group">
-                          
-                          <div class="input-group">
-                          
-                            <span class="input-group-addon"><i class="fa fa-check"></i></span> 
-
-                            <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Stock" required>
-
-                          </div>
-
-                        </div>
-
-                        <!-- ENTRADA PARA PRECIO COMPRA -->
-
-                        <div class="form-group row">
-
-                            <div class="col-xs-6">
-                            
-                              <div class="input-group">
-                              
-                                <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span> 
-
-                                <input type="number" class="form-control input-lg" id="nuevoPrecioCompra" name="nuevoPrecioCompra" step="any" min="0" placeholder="Precio de compra" required>
-
-                              </div>
-
-                            </div>
-
-                            <!-- ENTRADA PARA PRECIO VENTA -->
-
-                            <div class="col-xs-6">
-                            
-                              <div class="input-group">
-                              
-                                <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span> 
-
-                                <input type="number" class="form-control input-lg" id="nuevoPrecioVenta" name="nuevoPrecioVenta" step="any" min="0" placeholder="Precio de venta" required>
-
-                              </div>
-                            
-                              <br>
-
-                              <!-- CHECKBOX PARA PORCENTAJE -->
-
-                              <div class="col-xs-6">
-                                
-                                <div class="form-group">
-                                  
-                                  <label>
-                                    
-                                    <input type="checkbox" class="minimal porcentaje" checked>
-                                    Utilizar procentaje
-                                  </label>
-
-                                </div>
-
-                              </div>
-
-                              <!-- ENTRADA PARA PORCENTAJE -->
-
-                              <div class="col-xs-6" style="padding:0">
-                                
-                                <div class="input-group">
-                                  
-                                  <input type="number" class="form-control input-lg nuevoPorcentaje" min="0" value="40" required>
-
-                                  <span class="input-group-addon"><i class="fa fa-percent"></i></span>
-
-                                </div>
-
-                              </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- ENTRADA PARA SUBIR FOTO -->
-
-                        <div class="form-group">
-                          
-                          <div class="panel">SUBIR IMAGEN</div>
-
-                          <input type="file" class="nuevaImagen" name="nuevaImagen">
-
-                          <p class="help-block">Peso máximo de la imagen 2MB</p>
-
-                          <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
 
                         </div>
 
