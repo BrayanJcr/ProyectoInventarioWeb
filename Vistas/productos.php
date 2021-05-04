@@ -9,6 +9,7 @@
     <script src="../js/scrollreveal.js"></script>
     <!--Bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!--CSS links-->
     <link rel="stylesheet" href="../css/login.css">
 </head>
 
@@ -182,6 +183,7 @@
 
                           </div>
 
+<<<<<<< HEAD
                           <!-- ENTRADA PARA EL CÓDIGO -->
                           
                           <div class="form-group">
@@ -241,6 +243,49 @@
                               </div>
 
                               <!-- ENTRADA PARA PRECIO VENTA -->
+=======
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <!--=====================================
+                    PIE DEL MODAL
+                    ======================================-->
+
+                    <div class="modal-footer">
+
+                      <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+                      <button type="submit" class="btn btn-primary">Guardar producto</button>
+
+                    </div>
+
+                  </form>
+
+                    <?php
+                      include "../Controlador/productos.controlador.php";
+                      $crearProducto = new ControladorProductos();
+                      $crearProducto -> ctrCrearProducto();
+
+                    ?>  
+
+                </div>
+
+              </div>
+
+              </div>
+
+              <!--=====================================
+              MODAL EDITAR PRODUCTO
+              ======================================-->
+
+              <div id="modalEditarProducto" class="modal fade" role="dialog">
+
+              <div class="modal-dialog">
+
+                <div class="modal-content">
+>>>>>>> b29220708bfe6967051b000550e4f5435c89a5d5
 
                               <div class="col-xs-6">
                               
