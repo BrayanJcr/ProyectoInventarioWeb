@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav clase-ul">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="menu.php">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="productos.php">Productos</a>

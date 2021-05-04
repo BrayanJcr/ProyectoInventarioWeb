@@ -61,16 +61,8 @@
                 
                 </h1>
 
-                <ol class="breadcrumb">
-                  
-                  <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-                  
-                  <li class="active">Administrar productos</li>
-                
-                </ol>
-
               </section>
-=======
+
 <section class="content">
     <h1>
       
@@ -86,7 +78,7 @@
 
                   <div class="box-header with-border">
 
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarProducto">
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal12">
                       
                       Agregar producto
 
@@ -165,8 +157,6 @@
 
                         <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
 
-                        include "../Controlador/categorias.controlador.php";
-                        $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
                         <div class="form-group">
                           
                           <div class="input-group">
@@ -182,6 +172,7 @@
                               $item = null;
                               $valor = null;
 
+                              include "../Controlador/categorias.controlador.php";
                               $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
 
                               foreach ($categorias as $key => $value) {
@@ -328,11 +319,6 @@
                     <div class="modal-footer">
 
                       <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-
-                      include "../Controlador/productos.controlador.php";
-                      $crearProducto = new ControladorProductos();
-                      $crearProducto -> ctrCrearProducto();
-
                       <button type="submit" class="btn btn-primary">Guardar producto</button>
 
                     </div>
@@ -340,7 +326,7 @@
                   </form>
 
                     <?php
-
+                      include "../Controlador/productos.controlador.php";
                       $crearProducto = new ControladorProductos();
                       $crearProducto -> ctrCrearProducto();
 
@@ -541,13 +527,10 @@
 
                     </div>
 
-                    include "../Controlador/productos.controlador.php";
-                    $editarProducto = new ControladorProductos();
-                    $editarProducto -> ctrEditarProducto();
                   </form>
 
                     <?php
-
+                      include "../Controlador/productos.controlador.php";
                       $editarProducto = new ControladorProductos();
                       $editarProducto -> ctrEditarProducto();
 
@@ -561,15 +544,9 @@
               include "../Controlador/productos.controlador.php";
               $eliminarProducto = new ControladorProductos();
               $eliminarProducto -> ctrEliminarProducto();
+              ?>     
 
               </div>
-
-              <?php
-
-              $eliminarProducto = new ControladorProductos();
-              $eliminarProducto -> ctrEliminarProducto();
-
-              ?>      
             
     </div>
     <!--Script bootstrap-->
