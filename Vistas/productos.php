@@ -52,8 +52,13 @@
 <div class="content-wrapper">
 
 <section class="content">
+    <h1>
+      
+      Administrar productos
+    
+    </h1>
 
-  <div class="box">
+    <div class="box">
 
     <div class="box-header with-border">
 
@@ -151,6 +156,7 @@ MODAL AGREGAR PRODUCTO
                 $item = null;
                 $valor = null;
 
+                include "../Controlador/categorias.controlador.php";
                 $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
 
                 foreach ($categorias as $key => $value) {
@@ -306,6 +312,7 @@ MODAL AGREGAR PRODUCTO
 
       <?php
 
+        include "../Controlador/productos.controlador.php";
         $crearProducto = new ControladorProductos();
         $crearProducto -> ctrCrearProducto();
 
@@ -510,6 +517,7 @@ MODAL EDITAR PRODUCTO
 
       <?php
 
+        include "../Controlador/productos.controlador.php";
         $editarProducto = new ControladorProductos();
         $editarProducto -> ctrEditarProducto();
 
@@ -522,7 +530,7 @@ MODAL EDITAR PRODUCTO
 </div>
 
 <?php
-
+include "../Controlador/productos.controlador.php";
 $eliminarProducto = new ControladorProductos();
 $eliminarProducto -> ctrEliminarProducto();
 
