@@ -5,9 +5,6 @@ body{
 
 }
 
-.rowned{
-    width: auto;
-}
 
 .columna-form{
     margin-top: 50px;
@@ -17,10 +14,9 @@ body{
     padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 40px;
+    width: 500px;
     box-shadow: 5px 10px 7px rgba(0,0,0,0.5);
 }
-
-
 
 .nav-link{
     margin-left: 20px;
