@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <!--CSS links-->
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/producto.css">
 </head>
 
 <body>
@@ -50,7 +51,7 @@
         
       </nav>
 
-      <div class="container bg-light rounded ">
+      <div class="container bg-light rounded table-distance">
 
               <div class="content-wrapper">
 
@@ -58,18 +59,13 @@
                 
                 <h1>
                   
-                  Productos
+                  Administrar productos
                 
                 </h1>
 
               </section>
 
-<section class="content">
-    <h1>
-      
-      Administrar productos
-    
-    </h1>
+<section class="content"
 
     <div class="box">
 
@@ -86,7 +82,7 @@
 
                   </div>
 
-                  <div class="box-body">
+                  <div class="box-body options-distance">
                     
                   <table class="table table-bordered table-striped dt-responsive tablaProductos" width="100%">
                     
@@ -133,9 +129,7 @@
                       CABEZA DEL MODAL
                       ======================================-->
 
-                      <div class="modal-header" style="background:#3c8dbc; color:white">
-
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <div class="modal-header bg-success" style="background:#3c8dbc; color:white">
 
                         <h4 class="modal-title">Agregar producto</h4>
 
@@ -153,7 +147,7 @@
 
                           <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
 
-                          <div class="form-group">
+                          <div class="form-group options-distance">
                             
                             <div class="input-group">
                             
@@ -185,7 +179,7 @@
 
                           <!-- ENTRADA PARA EL CÓDIGO -->
             
-                          <div class="form-group">
+                          <div class="form-group options-distance">
                             
                             <div class="input-group">
                             
@@ -199,7 +193,7 @@
 
                           <!-- ENTRADA PARA LA DESCRIPCIÓN -->
 
-                            <div class="form-group">
+                            <div class="form-group options-distance">
                               
                               <div class="input-group">
                               
@@ -213,7 +207,7 @@
 
                             <!-- ENTRADA PARA STOCK -->
 
-                            <div class="form-group">
+                            <div class="form-group options-distance">
                               
                               <div class="input-group">
                               
@@ -227,7 +221,7 @@
 
                             <!-- ENTRADA PARA PRECIO COMPRA -->
 
-                            <div class="form-group row">
+                            <div class="form-group row options-distance">
 
                                 <div class="col-xs-6">
                                 
@@ -243,7 +237,7 @@
 
                                 <!-- ENTRADA PARA PRECIO VENTA -->
 
-                                <div class="col-xs-6">
+                                <div class="col-xs-6 options-distance">
                                 
                                   <div class="input-group">
                                   
@@ -257,7 +251,7 @@
 
                                   <!-- CHECKBOX PARA PORCENTAJE -->
 
-                                  <div class="col-xs-6">
+                                  <div class="col-xs-6 options-distance">
                                     
                                     <div class="form-group">
                                       
@@ -273,7 +267,7 @@
 
                                   <!-- ENTRADA PARA PORCENTAJE -->
 
-                                  <div class="col-xs-6" style="padding:0">
+                                  <div class="col-xs-6 options-distance" style="padding:0">
                                     
                                     <div class="input-group">
                                       
@@ -291,7 +285,7 @@
 
                             <!-- ENTRADA PARA SUBIR FOTO -->
 
-                            <div class="form-group">
+                            <div class="form-group options-distance">
                               
                               <div class="panel">SUBIR IMAGEN</div>
 
@@ -313,7 +307,7 @@
 
                       <div class="modal-footer">
 
-                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
 
                         <button type="submit" class="btn btn-primary">Guardar producto</button>
 

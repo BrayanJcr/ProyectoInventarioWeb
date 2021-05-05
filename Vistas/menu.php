@@ -59,17 +59,43 @@
             <div class="col-md-9">
                 <div class="container">
                     <div class="row">
-                        <img class="rounded img-fluid min-h"  src="../imagenes/tienda fisica.jpg" alt="">
+                        <img class="img-fluid banner"  src="../imagenes/fondo-ciudad.jpg" alt="">
                     </div>
                     <div class="row row-cols-3 justify-content-between margin20 px-0">
                         <div class="col contenedor">
-                          <a href="productos.php"><img class="imagen image-fluid" style="width: 105%" src="../imagenes/frutas-producto.jpg" alt=""></a>
+                          <a href="productos.php">
+                              <figure>
+                                  <img class="imagen image-fluid" style="width: 100%" src="../imagenes/frutas-producto.jpg" alt="">
+                                  <div class="capa">
+                                      <h3>Productos</h3>
+
+                                  </div>
+                              </figure>
+                          </a>
                         </div>
-                        <div class="col contenedor ">
-                          <a href="ventas.php"><img class="imagen image-fluid" style="width: 105%" src="../imagenes/Moneda-venta.jpg" alt=""></a>
+
+                        <div class="col contenedor">
+                            <a href="productos.php">
+                                <figure>
+                                    <img class="imagen image-fluid" style="width: 100%" src="../imagenes/Moneda-venta.jpg" alt="">
+                                    <div class="capa">
+                                        <h3>Ventas</h3>
+
+                                    </div>
+                                </figure>
+                            </a>
                         </div>
-                        <div class="col contenedor ">
-                          <a href="producto.php"><img class="imagen image-fluid" style="width: 105%" src="../imagenes/tienda-ven.jpg" alt=""></a>
+
+                        <div class="col contenedor">
+                            <a href="productos.php">
+                                <figure>
+                                    <img class="imagen image-fluid" style="width: 100%" src="../imagenes/tienda-ven.jpg" alt="">
+                                    <div class="capa">
+                                        <h3>Vencimiento</h3>
+
+                                    </div>
+                                </figure>
+                            </a>
                         </div>
                 </div>
             </div>
