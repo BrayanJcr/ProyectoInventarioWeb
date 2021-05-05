@@ -5,3 +5,9 @@ window.sr =  ScrollReveal();
         origin: 'right',
         distance: '-100px'
     });
+
+sr.reveal('.c-animation',{
+    duration: 2000,
+    origin: 'left',
+    distance: '-100px'
+});

@@ -18,18 +18,19 @@
     
     <div class="col-md-6">
 
-      <img src="../imagenes/mi-tienda-segura-1.png" class="img-responsive img-tienda" width="100%">
+      <img src="../imagenes/mi-tienda-segura-1.png" class="img-responsive img-tienda d-none d-lg-block" width="100%">
 
     </div>
 
-    <div class="col-md-3 columna-form">
+    <div class="col-md-6 columna-form">
+
 
         <form class="" method="post">
-            <img src="../svg/person-circle-outline.svg" alt="">
+            <img class ="img-fluid" src="../svg/person-circle-outline.svg " alt="" >
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Usuario</label>
               <input type="text" class="form-control" placeholder="Usuario" name="ingUsuario" required>
-              
+            </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
               <input type="password" class="form-control" placeholder="Contraseña" name="ingPassword" required>
@@ -37,7 +38,7 @@
             
             <button type="submit" class="btn btn-primary">Acceder</button>
             
-            <button type="submit" class="btn btn btn-success margin-left-auto">Registrarse</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"">Registrarse</button>
             
           </form>
 
@@ -49,6 +50,42 @@
           ?>
       
     </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="registro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <!--Cabeza del modal-->
+                  <div class="modal-header bg-primary">
+                      <h5 class="modal-title text-light" id="staticBackdropLabel">Registrarse</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!--Cuerpo del modal registro-->
+                  <div class="modal-body">
+                      <form>
+                          <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Nombre real</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                          </div>
+
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary">Ingresar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
 
   </div>
 

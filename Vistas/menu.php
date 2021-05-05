@@ -61,7 +61,7 @@
                     <div class="row">
                         <img class="img-fluid banner"  src="../imagenes/fondo-ciudad.jpg" alt="">
                     </div>
-                    <div class="row row-cols-3 justify-content-between margin20 px-0">
+                    <div class="row row-cols-3 justify-content-between margin20 px-0 c-animation">
                         <div class="col contenedor">
                           <a href="productos.php">
                               <figure>
@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="col contenedor">
-                            <a href="productos.php">
+                            <a href="ventas.php">
                                 <figure>
                                     <img class="imagen image-fluid" style="width: 100%" src="../imagenes/Moneda-venta.jpg" alt="">
                                     <div class="capa">
