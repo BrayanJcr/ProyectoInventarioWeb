@@ -28,7 +28,7 @@
         <form class="" method="post">
             <img class ="img-fluid" src="../svg/person-circle-outline.svg " alt="" >
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Usuario</label>
+              <label for="user" class="form-label">Usuario</label>
               <input type="text" class="form-control" placeholder="Usuario" name="ingUsuario" required>
             </div>
             <div class="mb-3">
@@ -38,7 +38,7 @@
             
             <button type="submit" class="btn btn-primary">Acceder</button>
             
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"">Registrarse</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"">Registrar</button>
             
           </form>
 
@@ -62,26 +62,46 @@
                   </div>
                   <!--Cuerpo del modal registro-->
                   <div class="modal-body">
-                      <form>
-                          <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Nombre real</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" required>
-                          </div>
+                      <form class="" method="post">
                           <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
+                              <input name="nuevoUsuario" type="text" class="form-control" id="exampleInputEmail1" required>
                           </div>
                           <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
+                              <input name="nuevoNombre" type="password" class="form-control" id="exampleInputPassword1" required>
                           </div>
+
+                          <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Tipo de usuario</label>
+                              <input name="nuevoPerfil" type="text" class="form-control" id="exampleInputEmail1" required>
+                          </div>
+
+                          <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Nombre real</label>
+                              <input name="nuevoPassword" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+
+                          </div>
+
+                          <div class="mb-3">
+                              <label for="formFile" class="form-label">Seleccionar foto</label>
+                              <input name="nuevaFoto" class="form-control" type="file" id="formFile">
+                          </div>
+
+
+
 
                       </form>
                   </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                      <button type="button" class="btn btn-primary">Ingresar</button>
+                      <button type="submit" class="btn btn-primary">Registrar</button>
+
+                      <?php
+
+                      $registro = new ControladorUsuarios();
+                      $registro -> ctrCrearUsuario();
+                      ?>
                   </div>
               </div>
           </div>
