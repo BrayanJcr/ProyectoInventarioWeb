@@ -256,7 +256,7 @@ class ControladorProductos{
 							   "precio_venta" => $_POST["editarPrecioVenta"],
 							   "imagen" => $ruta);
 
-				include "../Modelo/productos.modelo.php";
+				include_once "../Modelos/productos.modelo.php";
 				$respuesta = ModeloProductos::mdlEditarProducto($tabla, $datos);
 
 				if($respuesta == "ok"){
