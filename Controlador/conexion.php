@@ -1,17 +1,21 @@
 <?php
 
-class Conexion{
+class Conexion
+{
 
-	static public function conectar(){
+    public static function conectar()
+    {
 
-		$link = new PDO("mysql:host=localhost;dbname=dbInventario",
-			            "root",
-			            "");
+        try {
+            $link = new PDO("mysql:host=localhost;dbname=dbInventario","root","");
+            $link->exec('SET CHARACTER SET utf8');
+            $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $link;
 
-		$link->exec("set names utf8");
+        } catch (Exception $e) {
+            echo "Error en " . $e->getMessage() . $e->getLine();
+        }
 
-		return $link;
-
-	}
+    }
 
 }

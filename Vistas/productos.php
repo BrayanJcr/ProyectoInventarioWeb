@@ -315,12 +315,13 @@
                       </div>
 
                     </form>
+
                     <?php
 
                     include_once "../Controlador/productos.controlador.php";
                     $crearProducto = new ControladorProductos();
                     $crearProducto -> ctrCrearProducto();
-
+                
                     ?>  
 
                     </div>
