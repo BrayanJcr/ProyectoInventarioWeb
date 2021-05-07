@@ -9,7 +9,7 @@ class ControladorProductos{
 	static public function ctrMostrarProductos($item, $valor, $orden){
 
 		$tabla = "productos";
-		include "../Modelo/productos.modelo.php";
+		include "../Modelos/productos.modelo.php";
 		$respuesta = ModeloProductos::mdlMostrarProductos($tabla, $item, $valor, $orden);
 
 		return $respuesta;
@@ -27,74 +27,8 @@ class ControladorProductos{
 			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaDescripcion"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["nuevoStock"]) &&	
 			   preg_match('/^[0-9.]+$/', $_POST["nuevoPrecioCompra"]) &&
-			   preg_match('/^[0-9.]+$/', $_POST["nuevoPrecioVenta"])){
-
-		   		/*=============================================
-				VALIDAR IMAGEN
-				=============================================*/
-
-			   	$ruta = "../Vistas/img/productos/default/anonymous.png";
-
-			   	if(isset($_FILES["nuevaImagen"]["tmp_name"])){
-
-					list($ancho, $alto) = getimagesize($_FILES["nuevaImagen"]["tmp_name"]);
-
-					$nuevoAncho = 500;
-					$nuevoAlto = 500;
-
-					/*=============================================
-					CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
-					=============================================*/
-
-					$directorio = "../Vistas/img/productos/".$_POST["nuevoCodigo"];
-
-					mkdir($directorio, 0755);
-
-					/*=============================================
-					DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
-					=============================================*/
-
-					if($_FILES["nuevaImagen"]["type"] == "image/jpeg"){
-
-						/*=============================================
-						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
-						=============================================*/
-
-						$aleatorio = mt_rand(100,999);
-
-						$ruta = "../Vistas/img/productos/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
-
-						$origen = imagecreatefromjpeg($_FILES["nuevaImagen"]["tmp_name"]);						
-
-						$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
-
-						imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
-
-						imagejpeg($destino, $ruta);
-
-					}
-
-					if($_FILES["nuevaImagen"]["type"] == "image/png"){
-
-						/*=============================================
-						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
-						=============================================*/
-
-						$aleatorio = mt_rand(100,999);
-
-						$ruta = "../Vistas/img/productos/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
-
-						$origen = imagecreatefrompng($_FILES["nuevaImagen"]["tmp_name"]);						
-
-						$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
-
-						imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
-
-						imagepng($destino, $ruta);
-
-					}
-
-				}
+			   preg_match('/^[0-9.]+$/', $_POST["nuevoPrecioVenta"]))
+			{
 
 				$tabla = "productos";
 
@@ -103,10 +37,9 @@ class ControladorProductos{
 							   "descripcion" => $_POST["nuevaDescripcion"],
 							   "stock" => $_POST["nuevoStock"],
 							   "precio_compra" => $_POST["nuevoPrecioCompra"],
-							   "precio_venta" => $_POST["nuevoPrecioVenta"],
-							   "imagen" => $ruta);
+							   "precio_venta" => $_POST["nuevoPrecioVenta"]);
 
-			    include "../Modelos/productos.modelo.php";
+			    include_once "../Modelos/productos.modelo.php";
 				$respuesta = ModeloProductos::mdlIngresarProducto($tabla, $datos);
 
 				if($respuesta == "ok"){
@@ -127,6 +60,7 @@ class ControladorProductos{
 									})
 
 						</script>';
+
 
 				}
 
