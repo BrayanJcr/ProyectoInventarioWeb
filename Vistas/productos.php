@@ -284,8 +284,6 @@
 
                                             </div>
 
-
-
                                         </div>
 
                                     </div>
@@ -306,14 +304,6 @@
                                 <button type="submit" class="btn btn-primary">Guardar producto</button>
 
                             </div>
-
-                            <?php
-
-                            include "../Controlador/productos.controlador.php";
-                            $crearProducto = new ControladorProductos();
-                            $crearProducto -> ctrCrearProducto();
-
-<<<<<<< HEAD
                     </form>
 
                     <?php
@@ -323,12 +313,6 @@
                     $crearProducto -> ctrCrearProducto();
                 
                     ?>  
-=======
-                            ?>
-                        </form>
-
-
->>>>>>> de6ccbbe2388cb63944f9189abc9e0e8f3dc5a81
 
                     </div>
                   </div>
