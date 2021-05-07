@@ -23,7 +23,7 @@ class ControladorUsuarios{
 
 				if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $encriptar){
 
-					if($respuesta["estado"] == 1){
+
 
 						$_SESSION["iniciarSesion"] = "ok";
 						$_SESSION["id"] = $respuesta["id"];
@@ -61,12 +61,7 @@ class ControladorUsuarios{
 
 						}				
 						
-					}else{
 
-						echo '<br>
-							<div class="alert alert-danger">El usuario aún no está activado</div>';
-
-					}		
 
 				}else{
 
@@ -109,7 +104,7 @@ class ControladorUsuarios{
 					CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
 					=============================================*/
 
-					$directorio = "vistas/img/usuarios/".$_POST["nuevoUsuario"];
+					$directorio = "../Vistas/img/usuarios/".$_POST["nuevoUsuario"];
 
 					mkdir($directorio, 0755);
 
@@ -125,7 +120,7 @@ class ControladorUsuarios{
 
 						$aleatorio = mt_rand(100,999);
 
-						$ruta = "vistas/img/usuarios/".$_POST["nuevoUsuario"]."/".$aleatorio.".jpg";
+						$ruta = "../Vistas/img/usuarios/".$_POST["nuevoUsuario"]."/".$aleatorio.".jpg";
 
 						$origen = imagecreatefromjpeg($_FILES["nuevaFoto"]["tmp_name"]);						
 
@@ -145,7 +140,7 @@ class ControladorUsuarios{
 
 						$aleatorio = mt_rand(100,999);
 
-						$ruta = "vistas/img/usuarios/".$_POST["nuevoUsuario"]."/".$aleatorio.".png";
+						$ruta = "../Vistas/img/usuarios/".$_POST["nuevoUsuario"]."/".$aleatorio.".png";
 
 						$origen = imagecreatefrompng($_FILES["nuevaFoto"]["tmp_name"]);						
 
@@ -186,7 +181,7 @@ class ControladorUsuarios{
 
 						if(result.value){
 						
-							window.location = "usuarios";
+							window.location = "menu.php";
 
 						}
 
@@ -214,7 +209,7 @@ class ControladorUsuarios{
 
 						if(result.value){
 						
-							window.location = "usuarios";
+							window.location = "login.php";
 
 						}
 
