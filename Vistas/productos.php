@@ -80,7 +80,9 @@
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregarProducto">
                       Agregar Producto
                     </button>
-
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalModificarProducto">
+                      Modificar Producto
+                    </button>
                   </div>
 
                   <div class="box-body options-distance">
@@ -311,6 +313,181 @@
                     include_once "../Controlador/productos.controlador.php";
                     $crearProducto = new ControladorProductos();
                     $crearProducto -> ctrCrearProducto();
+                
+                    ?>  
+
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="modalModificarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="" method="post">
+                            <!--=====================================
+                      CABEZA DEL MODAL
+                      ======================================-->
+
+                            <div class="modal-header bg-success" style="background:#3c8dbc; color:white">
+
+                                <h4 class="modal-title">Modificar producto</h4>
+
+                            </div>
+
+                            <!--=====================================
+                            CUERPO DEL MODAL
+                            ======================================-->
+
+                            <div class="modal-body">
+
+
+                                <div class="box-body">
+
+
+                                    <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
+
+                                    <div class="form-group options-distance">
+
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="fa fa-th"></i></span>
+
+                                            <select class="form-control input-lg" id="editarCategoria" name="editarCategoria" required>
+
+                                                <option value="">Selecionar categoría</option>
+
+                                                <?php
+
+                                                $item = null;
+                                                $valor = null;
+
+                                                include_once "../Controlador/categorias.controlador.php";
+                                                $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
+
+                                                foreach ($categorias as $key => $value) {
+                                                    echo '<option value="'.$value["id"].'">'.$value["categoria"].'</option>';
+                                                }
+
+                                                ?>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- ENTRADA PARA EL CÓDIGO -->
+
+                                    <div class="form-group options-distance">
+
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="fa fa-code"></i></span>
+
+                                            <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" placeholder="Ingresar código" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- ENTRADA PARA LA DESCRIPCIÓN -->
+
+                                    <div class="form-group options-distance">
+
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span>
+
+                                            <input type="text" class="form-control input-lg" name="editarDescripcion" placeholder="Ingresar descripción" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- ENTRADA PARA STOCK -->
+
+                                    <div class="form-group options-distance">
+
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="fa fa-check"></i></span>
+
+                                            <input type="number" class="form-control input-lg" name="editarStock" min="0" placeholder="Stock" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- ENTRADA PARA PRECIO COMPRA -->
+
+                                    <div class="form-group row options-distance">
+
+                                        <div class="col-xs-6">
+
+                                            <div class="input-group">
+
+                                                <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span>
+
+                                                <input type="number" class="form-control input-lg" id="editarPrecioCompra" name="editarPrecioCompra" step="any" min="0" placeholder="Precio de compra" required>
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- ENTRADA PARA PRECIO VENTA -->
+
+                                        <div class="col-xs-6 options-distance">
+
+                                            <div class="input-group">
+
+                                                <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
+
+                                                <input type="number" class="form-control input-lg" id="editarPrecioVenta" name="editarPrecioVenta" step="any" min="0" placeholder="Precio de venta" required>
+
+                                            </div>
+
+                                            <br>
+
+                                            <!-- CHECKBOX PARA PORCENTAJE -->
+
+                                            <div class="col-xs-6 options-distance">
+
+                                                <div class="form-group">
+
+                                                    <label>
+
+                                                        <input type="checkbox" class="minimal porcentaje" checked>
+                                                        Utilizar procentaje
+                                                    </label>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--=====================================
+                            PIE DEL MODAL
+                            ======================================-->
+
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+
+                                <button type="submit" class="btn btn-primary">Modificar producto</button>
+
+                            </div>
+                    </form>
+
+                    <?php
+
+                    include_once "../Controlador/productos.controlador.php";
+                    $ModificarProducto = new ControladorProductos();
+                    $ModificarProducto -> ctrEditarProducto();
                 
                     ?>  
 

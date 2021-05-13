@@ -187,8 +187,7 @@ class ControladorProductos{
 							   "descripcion" => $_POST["editarDescripcion"],
 							   "stock" => $_POST["editarStock"],
 							   "precio_compra" => $_POST["editarPrecioCompra"],
-							   "precio_venta" => $_POST["editarPrecioVenta"],
-							   "imagen" => $ruta);
+							   "precio_venta" => $_POST["editarPrecioVenta"]);
 
 				include_once "../Modelos/productos.modelo.php";
 				$respuesta = ModeloProductos::mdlEditarProducto($tabla, $datos);
