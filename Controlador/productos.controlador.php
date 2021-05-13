@@ -198,7 +198,7 @@ class ControladorProductos{
 
 						swal({
 							  type: "success",
-							  title: "El producto ha sido editado correctamente",
+							  title: "El producto ha sido Modificado correctamente",
 							  showConfirmButton: true,
 							  confirmButtonText: "Cerrar"
 							  }).then(function(result){
