@@ -43,7 +43,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Bienvenido</a>
+                <p class="nav-link" >Bienvenido <?php echo " jimmy"; ?></p>
               </li>
             </ul>
           </div>

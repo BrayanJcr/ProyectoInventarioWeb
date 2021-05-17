@@ -93,17 +93,16 @@
                     
                     <tr>
                       
-                      <th style="width:10px">#</th>
+
 
                       <th>Código</th>
                       <th>Descripción</th>
                       <th>Categoría</th>
                       <th>Stock</th>
-                      <th>Fecha De Vencimiento</th>
                       <th>Precio de compra</th>
                       <th>Precio de venta</th>
-                      <th>Agregado</th>
-                      <th>Acciones</th>
+                      <th>Fecha de creacion</th>
+                      <th>Fecha de caducidad</th>
                       
                     </tr> 
 
@@ -120,10 +119,26 @@
                         $mostrarProd = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
                         foreach ($mostrarProd as $mostrarProd) {
-
-                        }
-
                         ?>
+
+                        <tr>
+                            <td><?php echo $mostrarProd['codigo'];?></td>
+                            <td><?php echo $mostrarProd['descripcion'];?></td>
+                            <td><?php echo $mostrarProd['categoria'];?></td>
+                            <td><?php echo $mostrarProd['stock'];?></td>
+                            <td><?php echo $mostrarProd['precio_compra'];?></td>
+                            <td><?php echo $mostrarProd['precio_venta'];?></td>
+                            <td><?php echo $mostrarProd['fecha'];?></td>
+                            <td><?php echo $mostrarProd['FechaDeCaducidad'];?></td>
+
+
+
+                        </tr>
+                        <?php
+                        }
+                        ?>
+
+
 
 
                     </tbody>

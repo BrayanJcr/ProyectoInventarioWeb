@@ -12,7 +12,7 @@ class ModeloProductos{
 
 		if($item != null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item ORDER BY id DESC");
+			$stmt = Conexion::conectar()->prepare("SELECT codigo, descripcion, categorias.categoria, stock, precio_compra, precio_venta, fecha, FechaDeCaducidad FROM $tabla WHERE $item = :$item INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria ORDER BY id DESC");
 
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 
@@ -22,7 +22,7 @@ class ModeloProductos{
 
 		}else{
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ORDER BY $orden DESC");
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria ORDER BY $orden DESC");
 
 			$stmt -> execute();
 
