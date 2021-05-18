@@ -27,7 +27,16 @@
                 <a class="nav-link active" aria-current="page" href="menu.php">Inicio</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="usuario.php">Usuario</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="categoria.php">Categoria</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="productos.php">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cliente.php">Cliente</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="ventas.php">Ventas</a>
@@ -49,7 +58,6 @@
           </div>
         
       </nav>
-
 
       <div class="container margin20">
         <div class="row">
