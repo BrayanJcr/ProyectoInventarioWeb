@@ -17,7 +17,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
           <img src="../imagenes/mi-tienda-segura-1.png" alt="logo tienda" style="width: 5%">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,16 @@
                 <a class="nav-link active" aria-current="page" href="menu.php">Inicio</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="usuario.php">Usuario</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="categoria.php">Categoria</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="productos.php">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cliente.php">Cliente</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="ventas.php">Ventas</a>
@@ -45,7 +54,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Bienvenido</a>
+                <p class="nav-link" >Bienvenido <?php echo " jimmy"; ?></p>
               </li>
             </ul>
           </div>
@@ -334,6 +343,10 @@
                     </div>
                   </div>
                 </div>
+
+                <!--=====================================
+                MODAL EDITAR PRODUCTO
+                ======================================-->
                 <div class="modal fade" id="modalModificarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
