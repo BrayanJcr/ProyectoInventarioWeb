@@ -65,9 +65,9 @@
                       CABEZA DEL MODAL
                       ======================================-->
 
-                      <div class="modal-header" style="background:#3c8dbc; color:white">
+                      <div class="modal-header bg-success" >
 
-                          <h5 class="modal-title">Registrarse</h5>
+                          <h5 class="modal-title text-light">Registrarse</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
                       </div>
@@ -82,7 +82,7 @@
 
                               <!-- ENTRADA PARA EL NOMBRE -->
 
-                              <div class="form-group">
+                              <div class="form-group options-distance">
 
                                   <div class="input-group">
 
@@ -96,7 +96,7 @@
 
                               <!-- ENTRADA PARA EL USUARIO -->
 
-                              <div class="form-group">
+                              <div class="form-group options-distance">
 
                                   <div class="input-group">
 
@@ -110,7 +110,7 @@
 
                               <!-- ENTRADA PARA LA CONTRASEÑA -->
 
-                              <div class="form-group">
+                              <div class="form-group options-distance">
 
                                   <div class="input-group">
 
@@ -124,7 +124,7 @@
 
                               <!-- ENTRADA PARA SELECCIONAR SU PERFIL -->
 
-                              <div class="form-group">
+                              <div class="form-group options-distance">
 
                                   <div class="input-group">
 
@@ -148,7 +148,7 @@
 
                               <!-- ENTRADA PARA SUBIR FOTO -->
 
-                              <div class="form-group">
+                              <div class="form-group options-distance">
 
                                   <div class="panel">SUBIR FOTO</div>
 
@@ -156,7 +156,7 @@
 
                                   <p class="help-block">Peso máximo de la foto 2MB</p>
 
-                                  <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
+                                  <img src="../svg/image-outline.svg" class="img-thumbnail previsualizar" width="100px">
 
                               </div>
 
