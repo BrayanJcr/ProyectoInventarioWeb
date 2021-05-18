@@ -113,7 +113,7 @@
 
                         $item = null;
                         $valor = null;
-                        $orden = 'id';
+                        $orden = 'id_productos';
 
                         include_once "../Controlador/productos.controlador.php";
                         $mostrarProd = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
@@ -202,7 +202,7 @@
                                                 $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
 
                                                 foreach ($categorias as $key => $value) {
-                                                    echo '<option value="'.$value["id"].'">'.$value["categoria"].'</option>';
+                                                    echo '<option value="'.$value["id_categoria"].'">'.$value["categoria"].'</option>';
                                                 }
 
                                                 ?>

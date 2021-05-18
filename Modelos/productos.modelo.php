@@ -12,7 +12,7 @@ class ModeloProductos{
 
 		if($item != null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT codigo, descripcion, categorias.categoria, stock, precio_compra, precio_venta, fecha, FechaDeCaducidad FROM $tabla WHERE $item = :$item INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria ORDER BY id DESC");
+			$stmt = Conexion::conectar()->prepare("SELECT codigo, descripcion, categorias.categoria, stock, precio_compra, precio_venta, fecha, FechaDeCaducidad FROM $tabla WHERE $item = :$item INNER JOIN productos ON productos.id_categoria = categorias.id_categoria ORDER BY id_productos DESC");
 
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 
@@ -29,7 +29,6 @@ class ModeloProductos{
 			return $stmt -> fetchAll();
 
 		}
-
 		$stmt -> close();
 
 		$stmt = null;
