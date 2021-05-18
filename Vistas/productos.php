@@ -163,6 +163,7 @@
 
               </div>
 
+
                 <!--=====================================
                 MODAL AGREGAR PRODUCTO
                 ======================================-->
@@ -209,12 +210,14 @@
 
                                                 include_once "../Controlador/categorias.controlador.php";
                                                 $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
-
+                                                print_r($categorias);
                                                 foreach ($categorias as $key => $value) {
                                                     echo '<option value="'.$value["id_categoria"].'">'.$value["categoria"].'</option>';
                                                 }
 
                                                 ?>
+
+
 
                                             </select>
 

@@ -37,7 +37,7 @@ class ModeloCategorias{
 
 		if($item != null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT id_categoria,categoria,fecha FROM $tabla WHERE $item = :$item");
+			$stmt = Conexion::conectar()->prepare("SELECT id_categoria,categoria,fecha FROM $tabla WHERE $item = $item");
 
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 
