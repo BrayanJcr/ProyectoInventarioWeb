@@ -75,7 +75,7 @@
 
               </section>
 
-<section class="content"
+<section class="content">
 
     <div class="box">
 
@@ -91,6 +91,9 @@
                     </button>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalModificarProducto">
                       Modificar Producto
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEliminarProducto">
+                      Eliminar Producto
                     </button>
                   </div>
 
@@ -120,12 +123,8 @@
                     <tbody>
                         <?php
 
-                        $item = null;
-                        $valor = null;
-                        $orden = 'id_productos';
-
                         include_once "../Controlador/productos.controlador.php";
-                        $mostrarProd = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
+                        $mostrarProd = ControladorProductos::ctrMostrarProductos();
 
                         foreach ($mostrarProd as $mostrarProd) {
                         ?>
@@ -525,6 +524,7 @@
                     </div>
                   </div>
                 </div>
+                
 
     </div>
     <!--Script bootstrap-->

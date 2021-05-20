@@ -6,11 +6,10 @@ class ControladorProductos{
 	MOSTRAR PRODUCTOS
 	=============================================*/
 
-	static public function ctrMostrarProductos($item, $valor, $orden){
+	static public function ctrMostrarProductos(){
 
-		$tabla = "productos";
 		include "../Modelos/productos.modelo.php";
-		$respuesta = ModeloProductos::mdlMostrarProductos($tabla, $item, $valor, $orden);
+		$respuesta = ModeloProductos::mdlMostrarProductos();
 
 		return $respuesta;
 
@@ -29,8 +28,6 @@ class ControladorProductos{
 			   preg_match('/^[0-9.]+$/', $_POST["nuevoPrecioCompra"]) &&
 			   preg_match('/^[0-9.]+$/', $_POST["nuevoPrecioVenta"]))
 			{
-
-				$tabla = "productos";
 
 				$datos = array("id_categoria" => $_POST["nuevaCategoria"],
 							   "codigo" => $_POST["nuevoCodigo"],

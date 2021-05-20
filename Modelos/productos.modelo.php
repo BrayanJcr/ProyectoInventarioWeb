@@ -8,31 +8,15 @@ class ModeloProductos{
 	MOSTRAR PRODUCTOS
 	=============================================*/
 
-	static public function mdlMostrarProductos($tabla, $item, $valor, $orden){
+	static public function mdlMostrarProductos(){
 
-		if($item != null){
+		$stmt = Conexion::conectar()->prepare("CALL SP_C_PRODUCTO()");
 
-			$stmt = Conexion::conectar()->prepare("SELECT codigo, descripcion, categorias.categoria, stock, precio_compra, precio_venta, fecha, FechaDeCaducidad FROM $tabla WHERE $item = :$item INNER JOIN productos ON productos.id_categoria = categorias.id_categoria ORDER BY id_productos DESC");
+		$stmt -> execute();
 
-			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+		return $stmt -> fetchAll();
 
-			$stmt -> execute();
-
-			return $stmt -> fetch();
-
-		}else{
-
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria ORDER BY $orden DESC");
-
-			$stmt -> execute();
-
-			return $stmt -> fetchAll();
-
-		}
 		$stmt -> close();
-
-		$stmt = null;
-
 	}
 
 	/*=============================================
@@ -40,7 +24,7 @@ class ModeloProductos{
 	=============================================*/
 	static public function mdlIngresarProducto($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("call SP_CREAR(:id_categoria, :codigo, :descripcion, :stock, :precio_compra, :precio_venta)");
+		$stmt = Conexion::conectar()->prepare("call SP_A_PRODUCTO(:id_categoria, :codigo, :descripcion, :stock, :precio_compra, :precio_venta)");
 
 		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
 		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
@@ -69,7 +53,7 @@ class ModeloProductos{
 	=============================================*/
 	static public function mdlEditarProducto($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("call SP_MODIFICAR(:id_categoria,:codigo,:descripcion,:stock,:precio_compra,:precio_venta)");
+		$stmt = Conexion::conectar()->prepare("call SP_M_PRODUCTO(:id_categoria,:codigo,:descripcion,:stock,:precio_compra,:precio_venta)");
 
 		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
 		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
@@ -99,9 +83,9 @@ class ModeloProductos{
 
 	static public function mdlEliminarProducto($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
+		$stmt = Conexion::conectar()->prepare("call SP_E_PRODUCTOS(:codigo)");
 
-		$stmt -> bindParam(":id", $datos, PDO::PARAM_INT);
+		$stmt -> bindParam(":codigo", $datos, PDO::PARAM_INT);
 
 		if($stmt -> execute()){
 
