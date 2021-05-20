@@ -75,7 +75,7 @@
 
               </section>
 
-<section class="content"
+<section class="content">
 
     <div class="box">
 
