@@ -231,10 +231,11 @@ class ControladorUsuarios{
 	=============================================*/
 
 	static public function ctrMostrarUsuarios(){
-
+		$tabla="usuarios";
+		$item = null;
+		$valor=null;
 		include "../Modelos/usuarios.modelo.php";
-		$respuesta = ModeloUsuarios::MdlMostrarUsuarios();
-
+		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
 		return $respuesta;
 	}
 

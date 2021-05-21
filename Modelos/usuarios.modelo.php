@@ -8,15 +8,34 @@ class ModeloUsuarios{
 	MOSTRAR USUARIOS
 	=============================================*/
 
-	static public function mdlMostrarUsuarios(){
+	static public function mdlMostrarUsuarios($tabla, $item, $valor){
 
 
-		$stmt = Conexion::conectar()->prepare("CALL SP_C_USUARIO()");
+		if($item != null){
 
-		$stmt -> execute();
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
 
-		return $stmt -> fetchAll();
+
+			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+			$stmt -> execute();
+
+			return $stmt -> fetch();
+
+		}else{
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+
+			$stmt -> execute();
+
+			return $stmt -> fetchAll();
+
+		}
+
 		$stmt -> close();
+
+		$stmt = null;
+
 
 	}
 
