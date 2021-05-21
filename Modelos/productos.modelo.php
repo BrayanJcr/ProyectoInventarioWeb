@@ -83,7 +83,7 @@ class ModeloProductos{
 
 	static public function mdlEliminarProducto($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("call SP_E_PRODUCTOS(:codigo)");
+		$stmt = Conexion::conectar()->prepare("call SP_E_PRODUCTO(:codigo)");
 
 		$stmt -> bindParam(":codigo", $datos, PDO::PARAM_INT);
 

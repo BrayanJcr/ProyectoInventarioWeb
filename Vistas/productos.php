@@ -524,7 +524,69 @@
                     </div>
                   </div>
                 </div>
-                
+                 <!--=====================================
+                MODAL Eliminar PRODUCTO
+                ======================================-->
+                <div class="modal fade" id="modalEliminarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="" method="get">
+                            <!--=====================================
+                            CABEZA DEL MODAL
+                            ======================================-->
+
+                            <div class="modal-header bg-success" style="background:#3c8dbc; color:white">
+
+                                <h4 class="modal-title">Eliminar producto</h4>
+
+                            </div>
+
+                            <!--=====================================
+                            CUERPO DEL MODAL
+                            ======================================-->
+
+                            <div class="modal-body">
+
+
+                                <div class="box-body">
+
+                                    <!-- ENTRADA PARA EL CÓDIGO -->
+
+                                    <div class="form-group options-distance">
+
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="fa fa-code"></i></span>
+
+                                            <input type="text" class="form-control input-lg" id="Codigo" name="Codigo" placeholder="Ingresar código" required>
+
+                                        </div>
+
+                                    </div>
+                            <!--=====================================
+                            PIE DEL MODAL
+                            ======================================-->
+
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+
+                                <button type="submit" class="btn btn-primary">Eliminar producto</button>
+
+                            </div>
+                        </form>
+
+                        <?php
+
+                        include_once "../Controlador/productos.controlador.php";
+                        $EliminarProducto = new ControladorProductos();
+                        $EliminarProducto -> ctrEliminarProducto();
+                    
+                        ?>  
+
+                    </div>
+                  </div>
+                </div>
 
     </div>
     <!--Script bootstrap-->

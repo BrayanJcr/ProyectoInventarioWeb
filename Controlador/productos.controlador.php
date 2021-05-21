@@ -239,19 +239,19 @@ class ControladorProductos{
 	=============================================*/
 	static public function ctrEliminarProducto(){
 
-		if(isset($_GET["idProducto"])){
+		if(isset($_GET["Codigo"])){
 
 			$tabla ="productos";
-			$datos = $_GET["idProducto"];
+			$datos = $_GET["Codigo"];
 
 			if($_GET["imagen"] != "" && $_GET["imagen"] != "../Vistas/img/productos/default/anonymous.png"){
 
 				unlink($_GET["imagen"]);
-				rmdir('../Vistas/img/productos/'.$_GET["codigo"]);
+				rmdir('../Vistas/img/productos/'.$_GET["editarCodigo"]);
 
 			}
 
-			include "../Modelo/producto.modelo.php";
+			include_once "../Modelos/productos.modelo.php";
 			$respuesta = ModeloProductos::mdlEliminarProducto($tabla, $datos);
 
 			if($respuesta == "ok"){
@@ -260,7 +260,7 @@ class ControladorProductos{
 
 				swal({
 					  type: "success",
-					  title: "El producto ha sido borrado correctamente",
+					  title: "El producto ha sido Eliminado correctamente",
 					  showConfirmButton: true,
 					  confirmButtonText: "Cerrar"
 					  }).then(function(result){
@@ -272,8 +272,7 @@ class ControladorProductos{
 							})
 
 				</script>';
-
-			}		
+			}	
 		}
 
 
