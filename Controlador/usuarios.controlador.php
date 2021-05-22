@@ -14,12 +14,9 @@ class ControladorUsuarios{
 
 			   	$encriptar = crypt($_POST["ingPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
-				$tabla = "usuarios";
-
-				$item = "usuario";
 				$valor = $_POST["ingUsuario"];
 
-				$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
+				$respuesta = ModeloUsuarios::MdlMostrarUsuarios($valor);
 
 				if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $encriptar){
 
@@ -154,8 +151,6 @@ class ControladorUsuarios{
 
 				}
 
-				$tabla = "usuarios";
-
 				$encriptar = crypt($_POST["nuevoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
 				$datos = array("nombre" => $_POST["nuevoNombre"],
@@ -163,8 +158,8 @@ class ControladorUsuarios{
 					           "password" => $encriptar,
 					           "perfil" => $_POST["nuevoPerfil"],
 					           "foto"=>$ruta);
-
-				$respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos);
+				include_once "../Modelos/usuarios.modelo.php";
+				$respuesta = ModeloUsuarios::mdlIngresarUsuario($datos);
 			
 				if($respuesta == "ok"){
 

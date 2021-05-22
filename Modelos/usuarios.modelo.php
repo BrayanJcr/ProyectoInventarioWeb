@@ -8,30 +8,19 @@ class ModeloUsuarios{
 	MOSTRAR USUARIOS
 	=============================================*/
 
-	static public function mdlMostrarUsuarios($tabla, $item, $valor){
+	static public function mdlMostrarUsuarios($valor){
 
 
-		if($item != null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+			$stmt = Conexion::conectar()->prepare("Call SP_C_USUARIO(:usuario)");
 
-
-			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
-
-			$stmt -> execute();
-
-			return $stmt -> fetch();
-
-		}else{
-
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+			$stmt -> bindParam(":usuario", $valor, PDO::PARAM_STR);
 
 			$stmt -> execute();
 
 			return $stmt -> fetchAll();
 
-		}
-
+		
 		$stmt -> close();
 
 		$stmt = null;
@@ -43,16 +32,14 @@ class ModeloUsuarios{
 	REGISTRO DE USUARIO
 	=============================================*/
 
-	static public function mdlIngresarUsuario($tabla, $datos){
+	static public function mdlIngresarUsuario($datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, usuario, password, perfil, foto) VALUES (:nombre, :usuario, :password, :perfil, :foto)");
+		$stmt = Conexion::conectar()->prepare("Call SP_A_USUARIO(:nombre,:usuario,:password,:perfil)");
 
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		$stmt->bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
 		$stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
 		$stmt->bindParam(":perfil", $datos["perfil"], PDO::PARAM_STR);
-		$stmt->bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
-
 		if($stmt->execute()){
 
 			return "ok";	
