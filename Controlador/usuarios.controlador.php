@@ -16,7 +16,7 @@ class ControladorUsuarios{
 
 				$valor = $_POST["ingUsuario"];
 
-				$rpta = ModeloUsuarios::MdlMostrarUsuarios($valor);
+				$rpta = ModeloUsuarios::mdlMostrarUsuarios($valor);
 
 				var_dump($rpta);
 
@@ -434,7 +434,6 @@ class ControladorUsuarios{
 
 		if(isset($_GET["idUsuario"])){
 
-			$tabla ="usuarios";
 			$datos = $_GET["idUsuario"];
 
 			if($_GET["fotoUsuario"] != ""){
@@ -444,7 +443,7 @@ class ControladorUsuarios{
 
 			}
 
-			$respuesta = ModeloUsuarios::mdlBorrarUsuario($tabla, $datos);
+			$respuesta = ModeloUsuarios::mdlBorrarUsuario($datos);
 
 			if($respuesta == "ok"){
 
