@@ -16,18 +16,21 @@ class ControladorUsuarios{
 
 				$valor = $_POST["ingUsuario"];
 
-				$respuesta = ModeloUsuarios::MdlMostrarUsuarios($valor);
+				$rpta = ModeloUsuarios::MdlMostrarUsuarios($valor);
 
-				if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $encriptar){
+				var_dump($rpta);
+
+				if($rpta['usuario'] == $_POST["ingUsuario"] && $rpta["password"] == $encriptar){
+
 
 
 
 						$_SESSION["iniciarSesion"] = "ok";
-						$_SESSION["id"] = $respuesta["id"];
-						$_SESSION["nombre"] = $respuesta["nombre"];
-						$_SESSION["usuario"] = $respuesta["usuario"];
-						$_SESSION["foto"] = $respuesta["foto"];
-						$_SESSION["perfil"] = $respuesta["perfil"];
+						$_SESSION["id"] = $rpta["id"];
+						$_SESSION["nombre"] = $rpta["nombre"];
+						$_SESSION["usuario"] = $rpta["usuario"];
+						$_SESSION["foto"] = $rpta["foto"];
+						$_SESSION["perfil"] = $rpta["perfil"];
 
 						/*=============================================
 						REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN
@@ -44,7 +47,8 @@ class ControladorUsuarios{
 						$valor1 = $fechaActual;
 
 						$item2 = "id";
-						$valor2 = $respuesta["id"];
+						$valor2 = $rpta["id"];
+						$tabla = 'usuarios';
 
 						$ultimoLogin = ModeloUsuarios::mdlActualizarUsuario($tabla, $item1, $valor1, $item2, $valor2);
 
@@ -56,21 +60,28 @@ class ControladorUsuarios{
 
 							</script>';
 
-						}				
-						
+						}
+
 
 
 				}else{
+
 
 					echo '<br><div class="alert alert-danger">Error al ingresar, vuelve a intentarlo</div>';
 
 				}
 
-			}	
+			}
 
 		}
 
 	}
+
+	static public function ctrMostrarNombre(){
+
+
+	    return $_SESSION['nombre'];
+    }
 
 	/*=============================================
 	REGISTRO DE USUARIO
@@ -226,11 +237,11 @@ class ControladorUsuarios{
 	=============================================*/
 
 	static public function ctrMostrarUsuarios(){
-		$tabla="usuarios";
-		$item = null;
+
+
 		$valor=null;
 		include "../Modelos/usuarios.modelo.php";
-		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
+		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($valor);
 		return $respuesta;
 	}
 

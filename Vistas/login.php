@@ -44,8 +44,8 @@
           </form>
 
           <?php
-            include "../Controlador/usuarios.controlador.php";
-            include "../Modelos/usuarios.modelo.php";
+            require_once "../Controlador/usuarios.controlador.php";
+            require_once "../Modelos/usuarios.modelo.php";
             $login = new ControladorUsuarios();
             $login -> ctrIngresoUsuario();
           ?>
