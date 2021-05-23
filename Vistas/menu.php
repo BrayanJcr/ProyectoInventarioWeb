@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -52,7 +54,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <p class="nav-link" >Bienvenido <?php echo " jimmy"; ?></p>
+                <p class="nav-link" >Bienvenido jimmy</p>
               </li>
             </ul>
           </div>

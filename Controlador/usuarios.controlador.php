@@ -14,11 +14,13 @@ class ControladorUsuarios{
 
 			   	$encriptar = crypt($_POST["ingPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
-				$valor = $_POST["ingUsuario"];
+                $tabla = "usuarios";
 
-				$rpta = ModeloUsuarios::mdlMostrarUsuarios($valor);
+                $item = "usuario";
+                $valor = $_POST["ingUsuario"];
 
-				var_dump($rpta);
+				$rpta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
+
 
 				if($rpta['usuario'] == $_POST["ingUsuario"] && $rpta["password"] == $encriptar){
 
@@ -76,12 +78,6 @@ class ControladorUsuarios{
 		}
 
 	}
-
-	static public function ctrMostrarNombre(){
-
-
-	    return $_SESSION['nombre'];
-    }
 
 	/*=============================================
 	REGISTRO DE USUARIO
@@ -188,6 +184,7 @@ class ControladorUsuarios{
 						if(result.value){
 						
 							window.location = "menu.php";
+							
 
 						}
 
@@ -195,6 +192,8 @@ class ControladorUsuarios{
 				
 
 					</script>';
+
+
 
 
 				}	
@@ -244,6 +243,8 @@ class ControladorUsuarios{
 		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($valor);
 		return $respuesta;
 	}
+
+
 
 	/*=============================================
 	EDITAR USUARIO
