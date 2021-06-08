@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,7 +14,7 @@
 </head>
 
 <body>
-
+    <!--BARRA DE NAVEGACIÓN-->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
           <img src="../imagenes/mi-tienda-segura-1.png" alt="logo tienda" style="width: 5%">
@@ -28,18 +26,11 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="menu.php">Inicio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="usuario.php">Usuario</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="categoria.php">Categoria</a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="productos.php">Productos</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cliente.php">Cliente</a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="ventas.php">Ventas</a>
               </li>
@@ -53,18 +44,31 @@
                   <li><a class="dropdown-item" href="login.php">Cerrar Sesión</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <p class="nav-link" >Bienvenido jimmy</p>
+              <li class="nav-item ">
+                <p class="nav-link" >Bienvenido </p>
               </li>
             </ul>
           </div>
         
       </nav>
+      <!--FIN DE BARRA DE NAVEAGACIÓN-->
 
       <div class="container margin20">
         <div class="row">
             <div class="col-md-3 bg-light notif-detalles">
                 <p class="fs-4">Notificaciones</p>
+
+                <?php
+                $notif = 0;
+                if($notif ==0){
+                  echo '<div><p class="text-center fw-light fs-2 mt-5 text-primary">Todo esta en orden</p></div>';
+                }else{
+                  echo '<div class="alert alert-warning" role="alert">
+                  Stock reducido de Galletas
+                </div>';
+                }
+
+                ?>
             </div>
             <div class="col-md-9">
                 <div class="container">

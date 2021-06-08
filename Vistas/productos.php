@@ -17,49 +17,44 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container-fluid">
-          <img src="../imagenes/mi-tienda-segura-1.png" alt="logo tienda" style="width: 5%">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav clase-ul">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="menu.php">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="usuario.php">Usuario</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="categoria.php">Categoria</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="productos.php">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cliente.php">Cliente</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ventas.php">Ventas</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Mas acciones
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="login.php">Cerrar Sesión</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <p class="nav-link" >Bienvenido <?php echo " jimmy"; ?></p>
-              </li>
-            </ul>
-          </div>
-        
-      </nav>
+      <!--BARRA DE NAVEGACIÓN-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+              <div class="container-fluid">
+                <img src="../imagenes/mi-tienda-segura-1.png" alt="logo tienda" style="width: 5%">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav clase-ul">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="menu.php">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="productos.php">Productos</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="ventas.php">Ventas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Mas acciones
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.php">Cerrar Sesión</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item ">
+                      <p class="nav-link" >Bienvenido </p>
+                    </li>
+                  </ul>
+                </div>
+              
+            </nav>
+      <!--FIN DE BARRA DE NAVEGACIÓN-->
 
       <div class="container bg-light rounded table-distance">
 
@@ -293,23 +288,11 @@
 
                                             </div>
 
-                                            <br>
+                                          
 
-                                            <!-- CHECKBOX PARA PORCENTAJE -->
+                                            
 
-                                            <div class="col-xs-6 options-distance">
-
-                                                <div class="form-group">
-
-                                                    <label>
-
-                                                        <input type="checkbox" class="minimal porcentaje" checked>
-                                                        Utilizar procentaje
-                                                    </label>
-
-                                                </div>
-
-                                            </div>
+                                        
 
                                         </div>
 

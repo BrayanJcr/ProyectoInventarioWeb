@@ -58,8 +58,11 @@ class ControladorProductos{
 
 						</script>';
 
+						
 
 				}
+
+				
 
 
 			}else{

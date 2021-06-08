@@ -1,5 +1,9 @@
 <?php
 
+
+
+
+
 class ControladorUsuarios{
 
 	/*=============================================
@@ -33,7 +37,8 @@ class ControladorUsuarios{
 						$_SESSION["usuario"] = $rpta["usuario"];
 						$_SESSION["foto"] = $rpta["foto"];
 						$_SESSION["perfil"] = $rpta["perfil"];
-
+						
+						
 						/*=============================================
 						REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN
 						=============================================*/
@@ -61,6 +66,7 @@ class ControladorUsuarios{
 								window.location = "menu.php";
 
 							</script>';
+							
 
 						}
 
